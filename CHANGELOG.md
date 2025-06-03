@@ -6,6 +6,10 @@
 
 - Bug fixes.
 
+## 5.2.4
+
+- Support complex `response_format` mappings
+
 ## 5.2.3
 
 - Support streamed network errors returned as list

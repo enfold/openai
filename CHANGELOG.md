@@ -6,6 +6,43 @@
 
 - Bug fixes.
 
+## 5.2.3
+
+- Support streamed network errors returned as list
+
+## 5.2.2
+
+- Streamed network errors are correctly decoded and thrown
+
+## 5.2.1
+
+- Tool call null safety if index is not in response
+
+## 5.2.0
+
+- Adjusted accepted chat response fields to allow support for gemini gpt
+
+## 5.1.5
+
+- Exposed the version configuration variable
+
+## 5.1.4
+
+- Error handling now occurs on every line returned by stream
+
+## 5.1.3
+
+- Revert error decoding change
+
+## 5.1.2
+
+- Check for error before decoding streamed json response
+
+## 5.1.1
+
+- Update to have single line text content
+- Expose response function call
+
 ## 5.1.0
 
 - Massive issues fixes related to incorrecr use of types, model fields..., audio transcription file streaming error handling, and more.

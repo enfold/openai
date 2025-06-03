@@ -66,7 +66,11 @@ final class OpenAIChatCompletionChoiceMessageModel {
   Map<String, dynamic> toMap() {
     return {
       "role": role.name,
-      "content": content?.map((contentItem) => contentItem.toMap()).toList(),
+      "content": content?[0].type == 'text'
+          ? content![0].text ?? ''
+          : content?.map((contentItem) {
+              return contentItem.toMap();
+            }).toList(),
       if (toolCalls != null && role == OpenAIChatMessageRole.assistant)
         "tool_calls": toolCalls!.map((toolCall) => toolCall.toMap()).toList(),
       if (name != null) "name": name,

@@ -12,7 +12,7 @@ abstract class OpenAIStrings {
   static const openai = 'OpenAI';
 
   /// This is the version of the API, in case it changes, it will be updated here.
-  static const version = 'v1';
+  static const defaultVersion = 'v1';
 
   /// This is the default base url for all the requests.
   static const defaultBaseUrl = 'https://api.openai.com';

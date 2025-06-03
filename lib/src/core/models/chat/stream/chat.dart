@@ -46,15 +46,18 @@ final class OpenAIStreamChatCompletionModel {
   /// {@macro openai_stream_chat_completion}
   /// This is used  to convert a [Map<String, dynamic>] object to a [OpenAIStreamChatCompletionModel] object.
   factory OpenAIStreamChatCompletionModel.fromMap(Map<String, dynamic> json) {
+    final id = json['id'] ?? json['model'];
+    final fingerprint = json['system_fingerprint'] ?? json['object'];
+
     return OpenAIStreamChatCompletionModel(
-      id: json['id'],
+      id: id,
       created: DateTime.fromMillisecondsSinceEpoch(json['created'] * 1000),
       choices: (json['choices'] as List)
           .map(
             (choice) => OpenAIStreamChatCompletionChoiceModel.fromMap(choice),
           )
           .toList(),
-      systemFingerprint: json['system_fingerprint'],
+      systemFingerprint: fingerprint,
     );
   }
 
